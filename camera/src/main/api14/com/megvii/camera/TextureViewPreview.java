@@ -4,6 +4,7 @@ import android.annotation.TargetApi;
 import android.content.Context;
 import android.graphics.Matrix;
 import android.graphics.SurfaceTexture;
+import android.os.Build;
 import android.view.Surface;
 import android.view.TextureView;
 import android.view.View;
@@ -15,14 +16,16 @@ import android.view.ViewGroup;
  * @Author zhuangzaiku
  * @Date 2019/2/1
  */
+@TargetApi(Build.VERSION_CODES.ICE_CREAM_SANDWICH)
 public class TextureViewPreview  extends PreviewImpl {
     private final TextureView mTextureView;
 
     private int mDisplayOrientation;
 
+
     public TextureViewPreview(Context context, ViewGroup viewGroup) {
         final View view = View.inflate(context, R.layout.texture_view, viewGroup);
-        mTextureView = view.findViewById(R.id.texture_view);
+        mTextureView = (TextureView) view.findViewById(R.id.texture_view);
         mTextureView.setSurfaceTextureListener(new TextureView.SurfaceTextureListener() {
             @Override
             public void onSurfaceTextureAvailable(SurfaceTexture surface, int width, int height) {

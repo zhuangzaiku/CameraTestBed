@@ -1,4 +1,4 @@
-/*
+package com.megvii.camera;/*
  * Copyright (C) 2016 The Android Open Source Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
@@ -14,7 +14,6 @@
  * limitations under the License.
  */
 
-package com.megvii.camera;
 
 import android.content.Context;
 import android.support.v4.view.ViewCompat;
@@ -24,7 +23,8 @@ import android.view.SurfaceView;
 import android.view.View;
 import android.view.ViewGroup;
 
-class SurfaceViewPreview extends PreviewImpl {
+
+class SurfaceViewPreview extends com.megvii.camera.PreviewImpl {
 
     final SurfaceView mSurfaceView;
 

@@ -1,10 +1,8 @@
 package com.megvii.camera;
 
-import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.content.Context;
 import android.content.res.TypedArray;
-import android.graphics.Camera;
 import android.os.Build;
 import android.os.Parcel;
 import android.os.Parcelable;
